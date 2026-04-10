@@ -112,3 +112,11 @@ Breast-cancer-classification/
 * Deploy using a web interface
 
 ---
+
+## Contact
+
+- LinkedIn: https://www.linkedin.com/in/aditxya/
+
+---
+
+If you found this project useful, consider giving it a ⭐
