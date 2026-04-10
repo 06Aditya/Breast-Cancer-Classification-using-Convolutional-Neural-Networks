@@ -1,125 +1,114 @@
-# Breast-cancer-classification
+# Breast Cancer Classification
 
-Breast Cancer Classification using CNN and transfer learning
+A deep learning project for classifying breast cancer histopathological images into **benign** and **malignant** categories using Convolutional Neural Networks (CNN) and transfer learning.
 
-## Citing
+---
 
-If you find this code useful in your research, please consider citing the blog:
+## Overview
 
-```
-@misc{sagarconvolutional,
-  Author = {Abhinav Sagar},
-  Title = {Convolutional Neural Network for Breast Cancer Classification},
-  Year = {2019},
-  Journal = {Towards Data Science},
-}
-```
+This project builds a binary image classification model to distinguish between benign and malignant tissue samples. It uses CNN architectures along with transfer learning to improve performance on medical image data.
 
-## IMPORTANT
+---
 
-Absolutely, under NO circumstance, should one ever screen patients using computer vision software trained with this code (or any home made software for that matter). 
+## Dataset
 
-Check out the corresponding medium blog post [https://towardsdatascience.com/convolutional-neural-network-for-breast-cancer-classification-52f1213dcc9](https://towardsdatascience.com/convolutional-neural-network-for-breast-cancer-classification-52f1213dcc9).
+The dataset used is the **BreakHis (Breast Cancer Histopathological Database)**.
 
-## Data
+Download:
+https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/
 
-The dataset can be downloaded from [here](https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/). This is a binary classification problem. I split the data as shown-
+### Data Structure
 
 ```
-dataset train
-  benign
-   b1.jpg
-   b2.jpg
-   //
-  malignant
-   m1.jpg
-   m2.jpg
-   //  validation
-   benign
-    b1.jpg
-    b2.jpg
-    //
-   malignant
-    m1.jpg
-    m2.jpg
-    //...
-```    
+dataset/
+│── train/
+│   ├── benign/
+│   └── malignant/
+│
+│── validation/
+│   ├── benign/
+│   └── malignant/
+```
 
-## Environment and tools
+---
 
-1. Jupyter Notebook
-2. Numpy
-3. Pandas
-4. Scikit-image
-5. Matplotlib
-6. Scikit-learn
-7. Keras
+## Tech Stack
+
+* Python
+* NumPy, Pandas
+* Scikit-learn
+* Matplotlib
+* Keras / TensorFlow
+* Jupyter Notebook
+
+---
 
 ## Installation
 
-`pip install numpy pandas scikit-image matplotlib scikit-learn keras`
+```bash
+pip install numpy pandas scikit-image matplotlib scikit-learn keras
+jupyter notebook
+```
 
-`jupyter notebook`
+---
 
 ## Model
 
-![model](images/image6.png)
+![Model Architecture](images/image6.png)
+
+* Convolutional Neural Network (CNN)
+* Transfer Learning approach
+* Image preprocessing and augmentation applied
+
+---
 
 ## Results
 
-### Loss/Accuracy vs Epoch
+### Loss and Accuracy
 
-![loss/accuracy](images/image1.png)
-
-![loss/accuracy](images/image2.png)
+![Loss Accuracy 1](images/image1.png)
+![Loss Accuracy 2](images/image2.png)
 
 ### Confusion Matrix
 
-![roc-auc](images/image3.png)
+![Confusion Matrix](images/image3.png)
 
-### ROC-AUC curve
+### ROC-AUC Curve
 
-![roc-auc](images/image4.png)
+![ROC Curve](images/image4.png)
 
-### Correct/Incorrect classification samples
+### Predictions
 
-![results](images/image5.png)
+![Results 1](images/image5.png)
+![Results 2](images/image7.png)
 
+### Performance Metrics
 
-![results](images/image7.png)
+* Validation Accuracy: **98.3%**
+* Precision: **0.65**
+* Recall: **0.95**
+* F1 Score: **0.77**
+* ROC-AUC Score: **0.69**
 
-The model is able to reach a validation accuracy of 98.3%, precision 0.65, recall 0.95, f1 score of 0.77 and ROC-AUC as 0.692.
+---
 
-## References
-
-1. https://peerj.com/articles/6201.pdf
-
-2. https://arxiv.org/pdf/1811.04241
-
-3. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6440620/
-
-## License
+## Project Structure
 
 ```
-MIT License
-
-Copyright (c) 2019 Abhinav Sagar
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Breast-cancer-classification/
+│── dataset/
+│── images/
+│── notebooks / scripts
+│── README.md
 ```
+
+---
+
+## Future Improvements
+
+* Improve precision and ROC-AUC score
+* Experiment with advanced architectures (ResNet, EfficientNet)
+* Hyperparameter tuning
+* Deploy using a web interface
+
+---
